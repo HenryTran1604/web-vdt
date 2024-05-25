@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 const StudentList = () => {
     const [students, setStudents] = useState([])
     const fetchStudent = () => {
-        fetch(URL)
+        fetch(`${URL}/list`)
             .then(response => response.json())
             .then(data => setStudents(data))
             .catch((err) => console.log(err))
